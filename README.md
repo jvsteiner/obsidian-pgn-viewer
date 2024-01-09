@@ -4,7 +4,7 @@ This is a plugin for Obsidian (https://obsidian.md).
 
 This project uses Typescript and and provides a code block for viewing and interacting with chess games in PGN format.
 
-There are other chess plugins for Obsidian, but I wanted to be able to view and interact with PGN files, with variations, in a code block. This plugin uses the (Lichess pgn viewer)[https://github.com/lichess-org/pgn-viewer], and is essentially just that viewer adapted for Obsidian. Currently, I think this is the only one that accomplishes that goal.
+There are other chess plugins for Obsidian, but I wanted to be able to view and interact with PGN files, with variations, in a code block. This plugin uses the [Lichess pgn viewer](https://github.com/lichess-org/pgn-viewer), and is essentially just that viewer adapted for Obsidian. Currently, I think this is the only one that accomplishes that goal.
 
 The intention is for taking notes about games and playing through them. This is not a plugin for playing chess, or editing or creating PGN files - just viewing them, although maybe such functionality could be added in the future.
 
@@ -23,6 +23,12 @@ Put the PGN file in a code block with the language set to `pgn`. The plugin will
 34.g5 Qh5 35.Rg4 exf5 36.Nf4 Qh8 37.Qf6+ Kh7 38.Rxh4+ 1-0
 ```
 ````
+
+becomes...
+
+![Sad Queen](assets/ivanchuk_vs_kaspararov.png)
+
+no editing for now.
 
 #### notes for me:
 
