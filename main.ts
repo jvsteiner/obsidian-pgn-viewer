@@ -1,13 +1,4 @@
-import {
-	App,
-	Editor,
-	MarkdownView,
-	Modal,
-	Notice,
-	Plugin,
-	PluginSettingTab,
-	Setting,
-} from "obsidian";
+import { App, Plugin, PluginSettingTab, Setting } from "obsidian";
 import { v4 as uuidv4 } from "uuid";
 import LichessPgnViewer from "lichess-pgn-viewer";
 
@@ -28,7 +19,7 @@ export default class PgnViewer extends Plugin {
 		this.registerMarkdownCodeBlockProcessor("pgn", this.draw_diagram());
 
 		// This adds a settings tab so the user can configure various aspects of the plugin
-		this.addSettingTab(new SampleSettingTab(this.app, this));
+		this.addSettingTab(new PgnSettingsTab(this.app, this));
 	}
 
 	private draw_diagram() {
@@ -69,23 +60,7 @@ export default class PgnViewer extends Plugin {
 	}
 }
 
-class SampleModal extends Modal {
-	constructor(app: App) {
-		super(app);
-	}
-
-	onOpen() {
-		const { contentEl } = this;
-		contentEl.setText("Woah!");
-	}
-
-	onClose() {
-		const { contentEl } = this;
-		contentEl.empty();
-	}
-}
-
-class SampleSettingTab extends PluginSettingTab {
+class PgnSettingsTab extends PluginSettingTab {
 	plugin: PgnViewer;
 
 	constructor(app: App, plugin: PgnViewer) {
