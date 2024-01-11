@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-pgn-viewer",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "This is a pgn viewing plugin for Obsidian (https://obsidian.md)",
 	"main": "main.js",
 	"scripts": {
